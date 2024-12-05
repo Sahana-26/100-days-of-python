@@ -18,12 +18,13 @@ digits_len = int(input('how many digits would you like?'))
 dict = {'alpha':alpha_len,'special_char':special_char_len,'digits':digits_len}
 dict2 = {'alpha':alpha,'special_char':special_char,'digits':digits}
 
-password = ''
+password = []
 
 for i in range(3):
     c = random.choice(options)
     for i in range(dict[c]):     
-        password+=random.choice(dict2[c])
+        password.append(random.choice(dict2[c]))
     options.remove(c)
 
-print(password)
+print('list',password)
+print('password : ',''.join(password))
