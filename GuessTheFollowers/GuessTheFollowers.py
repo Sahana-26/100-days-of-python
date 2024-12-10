@@ -5,6 +5,13 @@ def get_data():
     value = random.choice(data)
     return value
 
+def check():
+    print('correct guess')
+    li.pop(0)
+    li.append(get_data())
+    score+=1
+    print('current score : ',score)
+    
 li=[]
 for _ in range(2):
     li.append(get_data())
@@ -20,19 +27,9 @@ while(continue_game):
     choice = input('Who do you think has more followers? "A" or "B" : \n')
 
     if li[0]['follower_count']==ans and choice.lower() == "a":
-        print('correct guess')
-        li.pop(0)
-        li.append(get_data())
-        score+=1
-        print('current score : ',score)
-
+        check() 
     elif li[1]['follower_count']==ans and choice.lower() == "b":
-        print('correct guess')
-        li.pop(0)
-        li.append(get_data())
-        score+=1
-        print('current score : ',score)
-        
+        check()
     else:
         print('Wrong guess....total score is : ', score)
         continue_game=False
