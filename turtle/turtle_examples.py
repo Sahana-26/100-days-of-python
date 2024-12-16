@@ -5,20 +5,20 @@ t = Turtle()
 
 # draw a square using turtle module
 
-# for _ in range(4):
-#     t.width(5)
-#     t.forward(100)
-#     t.left(90)
+for _ in range(4):
+    t.width(5)
+    t.forward(100)
+    t.left(90)
 
-# # dashed line
+# dashed line
 
-# length = 200
-# while(length):
-#     t.pendown()
-#     t.forward(10)
-#     t.penup()
-#     t.forward(10)
-#     length-=20
+length = 200
+while(length):
+    t.pendown()
+    t.forward(10)
+    t.penup()
+    t.forward(10)
+    length-=20
 
 
 # triangle,square,pentagon,hexagon,heptagon,octagon,nanogon
@@ -34,30 +34,30 @@ colors = [
     "#FFC0CB"   # Pink
 ]
 
-# for num_side in range(3,10):
-#     angle = 360/num_side
-#     t.color(colors[num_side-3])
-#     for i in range(num_side):
-#         t.forward(100)
-#         t.right(angle)
+for num_side in range(3,10):
+    angle = 360/num_side
+    t.color(colors[num_side-3])
+    for i in range(num_side):
+        t.forward(100)
+        t.right(angle)
 
 
 # random walk
  
-# angles = [90, 180,270,360]
-# t.width(10)
-# for _ in range(100):
-#     t.setheading(random.choice(angles))
-#     t.color(random.choice(colors))
-#     t.forward(20)
+angles = [90, 180,270,360]
+t.width(10)
+for _ in range(100):
+    t.setheading(random.choice(angles))
+    t.color(random.choice(colors))
+    t.forward(20)
 
 # spirograph
 
-# t.speed(50)
-# for i in range(100):
-#     current_heading = t.heading()
-#     t.setheading(current_heading+10)
-#     t.circle(100)
+t.speed(50)
+for i in range(100):
+    current_heading = t.heading()
+    t.setheading(current_heading+10)
+    t.circle(100)
 
 
 #  hirst painting
